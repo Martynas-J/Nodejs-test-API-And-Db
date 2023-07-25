@@ -8,8 +8,8 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/",
+      "src": "/api/v1/students(.*)",
+      "dest": "/api/v1/students",
       "methods": [
         "GET",
         "POST",

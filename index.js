@@ -2,13 +2,15 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const router = require('./src/student/routes');
+const cors = require("cors")
 
 app.use(express.json())
 
+app.use(cors);
 app.use('/api/v1/students', router);
 app.use('/api/v1/students/:id', router);
 
-app.get("/", (req, res) =>{
+app.get("/", (req, res) => {
     res.send("hello jon")
 })
 
